@@ -1,0 +1,160 @@
+:root{
+    --gradient: linear-gradient(107.56deg, #00D290 0%, #00B9B1 100%);
+    --green: #00D290;
+    --blue: #00B9B1;
+    --red: #EA5454;
+
+    --mywallet: 4rem 'Pushster', Arial, sans-serif;
+    --futuro: 3rem 'Ubuntu', Arial, sans-serif;
+    --title: 3rem 'Poppins', Arial, sans-serif;
+    --subtitle: 2.25rem 'Poppins', Arial, sans-serif;
+    --text: 1.75rem 'Poppins', Arial, sans-serif;
+    --warnings: 1.375 'Poppins', Arial, sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background: var(--gradient);
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    background: white;
+    width: 75vw;
+    height: 66.6vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+}
+
+.presentation{
+    flex: 1;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.presentation h1{
+    font: var(--mywallet);
+}
+
+.presentation span{
+    font: var(--futuro);
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 20px 0;
+    width: 100px;
+    text-align: center;
+}
+
+.futuro-logo{
+    display:flex;
+}
+
+.futuro-logo img{
+    width: 6rem;
+}
+
+.futuro-logo h1{
+    font: var(--futuro);
+    line-height: 1;
+}
+
+.division{
+    display:block;
+    width: 2px;
+    height: 60%;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.login{
+    flex: 1;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login form{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content: center;
+    text-align:left;
+}
+
+.login form label{
+    font: var(--text)
+}
+
+.login form input{
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    
+    margin-bottom: 20px;
+    margin-top: 10px;
+    height:60px;
+    width: 400px;
+
+    padding: 10px;
+    font: var(--text);
+    font-size: 18px;
+}
+
+.login form button{
+    margin-top: 20px;
+    background: var(--gradient);
+    font: var(--text);
+    color: white;
+    border: 2px solid ;
+    border-radius: 8px;
+    padding: 1rem 3rem;
+    align-self: center;
+    cursor: pointer;
+
+    transition: .3s ease-in-out;
+}
+
+.login form button:hover{
+    border: 2px solid var(--green);
+    background: none;
+    color: var(--green);
+}
+
+@media (max-width: 1200px){
+    html{
+        font-size: 75%;
+    }
+    body{
+        padding: 100px 0;
+        height: 100%;
+    }
+
+    main{
+        flex-direction: column;
+        height: 100%;
+        padding: 100px 0;
+        gap: 100px;
+    }
+
+    .division{
+        display: none;
+    }
+
+    .login form input{
+        width: 100%;
+    }
+}
