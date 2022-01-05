@@ -47,7 +47,7 @@ main{
     gap: 50px;
 }
 
-.presentation h1{
+.mywallet{
     font: var(--mywallet);
 }
 
@@ -139,14 +139,13 @@ main{
         font-size: 75%;
     }
     body{
-        padding: 100px 0;
         height: 100%;
     }
 
     main{
-        flex-direction: column;
         height: 100%;
-        padding: 100px 0;
+        padding: 100px 50px;
+        margin: 100px 0;
         gap: 100px;
     }
 
@@ -156,5 +155,22 @@ main{
 
     .login form input{
         width: 100%;
+    }
+}
+
+@media (max-width:760px){
+    html{
+        font-size: 50%;
+    }
+
+    main{
+        flex-direction: column;
+        gap: 50px;
+        margin: 30px 0;
+        padding: 50px 50px;
+    }
+
+    .login form button{
+        padding: 2rem 4rem;
     }
 }
