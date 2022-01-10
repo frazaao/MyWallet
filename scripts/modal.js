@@ -1,10 +1,10 @@
 const modal = document.querySelector('.modal');
 const callModal = document.querySelector('button.new');
 
-localStorage.setItem('@myWalletLogin', JSON.stringify({
-    login: 'teste',
-    senha: '1234'
-}))
+// localStorage.setItem('@myWalletLogin', JSON.stringify({
+//     login: 'teste',
+//     senha: '1234'
+// }))
 
 callModal.addEventListener('click', event => {
     modal.classList.add('active')
@@ -13,7 +13,7 @@ callModal.addEventListener('click', event => {
         key === 'Escape' ? modal.classList.remove('active') : key;
     })
 
-    const cancelButton = document.querySelector('button[type="reset"]')
+    const cancelButton = modal.querySelector('button[type="reset"]')
 
     cancelButton.addEventListener('click', event => {
         modal.classList.remove('active')

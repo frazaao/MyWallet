@@ -132,6 +132,7 @@ main{
 
 .transactions table thead th,
 .transactions table tbody tr td{
+    text-align: left;
     padding: 10px 20px;
     font: var(--text);
     font-size: 18px;
@@ -213,10 +214,17 @@ main{
     display: none;
 }
 
+.modal .content form .type input[type="radio"]:checked+label[for="income"]{
+    background: rgba(0, 210, 144, 0.25) ;
+}
+
+.modal .content form .type input[type="radio"]:checked+label[for="outcome"]{
+    background: rgba(234, 84, 84, 0.25) ;
+}
+
 .modal .content form .type label[for="income"]{
     border: 2px solid var(--green);
     color: var(--green);
-    background: rgba(0, 210, 144, 0.1) ;
     width: 45%;
     text-align:center;
     padding: 10px 0;
@@ -228,7 +236,6 @@ main{
 .modal .content form .type label[for="outcome"]{
     border: 2px solid var(--red);
     color: var(--red);
-    background: rgba(234, 84, 84, 0.1) ;
     width: 45%;
     text-align:center;
     padding: 10px 0;

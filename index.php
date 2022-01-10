@@ -1,3 +1,21 @@
+<?php
+
+require_once('./config.php');
+require_once('./helper.php');
+
+$usuarioTeste = [
+    "nome" => 'Admin',
+    "login" => 'admin',
+    "senha" => 12345,
+    "tipo" => 'Admin'
+];
+
+?>
+<script>
+    if(localStorage.getItem('@mywallet')){
+        window.location.href = '/cliente.php'
+    }
+</script>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +23,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MyWallet</title>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
@@ -17,6 +35,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&family=Pushster&family=Ubuntu&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./styles/global.css">
+    <link rel="shortcut icon" href="./images/My.png" type="image/x-icon">
 </head>
 
 <body>
@@ -33,11 +52,11 @@
 
         </div>
         <div class="login">
-            <form action="">
-                <label for="">Login</label>
-                <input type="text">
-                <label for="">Senha</label>
-                <input type="password">
+            <form method="POST" action="./login.php">
+                <label for="login">Login</label>
+                <input type="text" name="login" id="login">
+                <label for="password">Senha</label>
+                <input type="password" name="password" id="password">
 
                 <button type="submit" class="submit">Entrar</button>
             </form>
@@ -51,3 +70,4 @@
 </script>
 
 </html>
+

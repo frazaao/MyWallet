@@ -79,6 +79,7 @@ main{
 
 .users table thead th,
 .users table tbody tr td{
+    text-align: left;
     padding: 10px 20px;
     font: var(--text);
     font-size: 18px;
@@ -166,10 +167,13 @@ main{
     display: none;
 }
 
+.modal .content form .type input[type="radio"]:checked+label{
+    background: rgba(0, 0, 0, 0.25) ;
+}
+
 .modal .content form .type label[for="client"]{
-    border: 2px solid var(--green);
-    color: var(--green);
-    background: rgba(0, 210, 144, 0.1) ;
+    border: 2px solid black;
+    color: black;
     width: 45%;
     text-align:center;
     padding: 10px 0;
@@ -179,9 +183,8 @@ main{
 }
 
 .modal .content form .type label[for="admin"]{
-    border: 2px solid var(--red);
-    color: var(--red);
-    background: rgba(234, 84, 84, 0.1) ;
+    border: 2px solid black;
+    color: var(black);
     width: 45%;
     text-align:center;
     padding: 10px 0;
@@ -227,6 +230,132 @@ main{
 }
 
 .modal .content form .buttons button[type="reset"]:hover{
+    background: none;
+    color: var(--red);
+    border: 2px solid var(--red);
+}
+
+
+.modal-edit{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-edit.active{
+    display: flex;
+}
+
+.modal-edit .content{
+    background: white;
+    padding: 40px 150px;
+    border-radius: 16px;
+}
+
+.modal-edit .content h1{
+    font: var(--title);
+}
+
+.modal-edit .content form{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    font: var(--text);
+}
+
+.modal-edit .content form>input{
+    width: 100%;
+    height: 60px;
+    font: var(--text);
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.modal-edit .content form>label{
+    margin-top: 25px;
+}
+
+.modal-edit .content form .type{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.modal-edit .content form .type input{
+    display: none;
+}
+
+.modal-edit .content form .type input[type="radio"]:checked+label{
+    background: rgba(0, 0, 0, 0.25) ;
+}
+
+.modal-edit .content form .type label[for="edit-client"]{
+    border: 2px solid black;
+    color: black;
+    width: 45%;
+    text-align:center;
+    padding: 10px 0;
+    font: var(--text);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-edit .content form .type label[for="edit-admin"]{
+    border: 2px solid black;
+    color: var(black);
+    width: 45%;
+    text-align:center;
+    padding: 10px 0;
+    font: var(--text);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-edit .content form .buttons{
+    margin-top: 25px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.modal-edit .content form .buttons button{
+    border: none;
+    padding: 10px 20px;
+    width: 50%;
+    font: var(--text);
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid;
+
+    transition: .2s ease-in-out;
+}
+
+.modal-edit .content form .buttons button[type="submit"]{
+    background: var(--gradient);
+    color: white;
+}
+
+.modal-edit .content form .buttons button[type="submit"]:hover{
+    background: none;
+    color: var(--green);
+    border: 2px solid var(--green);
+}
+
+.modal-edit .content form .buttons button[type="reset"]{
+    background: var(--red);
+    color: white;
+}
+
+.modal-edit .content form .buttons button[type="reset"]:hover{
     background: none;
     color: var(--red);
     border: 2px solid var(--red);
